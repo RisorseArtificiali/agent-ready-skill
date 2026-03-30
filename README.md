@@ -72,12 +72,15 @@ Each dimension targets a specific aspect of agent effectiveness:
 
 The skills follow the [Agent Skills](https://agentskills.io) open standard. They live in `skills/` and are symlinked into `.claude/skills/` for Claude Code discovery.
 
-For a fresh clone, recreate the symlinks:
+### Installation
+
+Clone and create symlinks to make the skills available to Claude Code:
 
 ```bash
-cd /path/to/lince
+git clone https://github.com/RisorseArtificiali/agent-ready-skill.git
+cd agent-ready-skill
 for skill in agent-ready agent-ready-scan agent-ready-fix agent-ready-report agent-ready-diff; do
-  ln -sf "$(pwd)/agent-ready-skill/skills/$skill" ".claude/skills/$skill"
+  ln -sf "$(pwd)/skills/$skill" "$HOME/.claude/skills/$skill"
 done
 ```
 
