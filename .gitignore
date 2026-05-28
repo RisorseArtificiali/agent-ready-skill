@@ -1,1 +1,5 @@
 .DS_Store
+
+# Local planning artifacts (PRDs/research) and editor config — kept untracked
+specs/
+.obsidian/
